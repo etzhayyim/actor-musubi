@@ -1,0 +1,22 @@
+(require '[babashka.classpath :as cp]
+         '[babashka.fs :as fs]
+         '[clojure.test :as t])
+
+(let [root (fs/parent (fs/absolutize *file*))]
+  (cp/add-classpath (str root "/src"))
+  (cp/add-classpath (str root "/test")))
+
+(doseq [ns-sym '[musubi.methods.test-charter-gates
+                  musubi.methods.test-ceremony-recognition-resolver
+                  musubi.social-test
+                  musubi.murakumo-test
+                  musubi.repository-contract-test]]
+  (require ns-sym))
+
+(let [result (apply t/run-tests
+                    '[musubi.methods.test-charter-gates
+                      musubi.methods.test-ceremony-recognition-resolver
+                      musubi.social-test
+                      musubi.murakumo-test
+                      musubi.repository-contract-test])]
+  (System/exit (if (zero? (+ (:fail result) (:error result))) 0 1)))

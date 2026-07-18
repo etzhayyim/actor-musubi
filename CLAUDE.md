@@ -1,4 +1,4 @@
-# 20-actors/musubi — CLAUDE.md
+# com-etzhayyim-musubi — CLAUDE.md
 
 ## Identity
 
@@ -161,21 +161,17 @@ R3 adds seasonal_communal_ceremony + silenMusubiReview cycle.
 
 ## Build & Deploy
 
-**R0 status**: Scaffold only. R0 cells RuntimeError on import.
+**R0 status**: planning and dry-run methods only; no live publication.
 
-R1 smoke test (when cells created):
+Repository verification:
 ```bash
-cd kotoba-lang/kotodama-py
-python -c "from kotodama.cells.musubi_marriage_ceremony import _r0_marker" 2>&1 | grep "R0 scaffold"
+bb run_tests.clj
 ```
 
 ## Related Files
 
-- `/20-actors/musubi/manifest.jsonld`
-- `/20-actors/musubi/README.md`
-- `/00-contracts/lexicons/com/etzhayyim/musubi/` (5 Lexicons + README)
-- `/90-docs/adr/2605263400-musubi-covenant-ceremony-tier-b-actor-r0.md`
-- `/90-docs/adr/2605262700-chigiri-legal-procedure-tier-b-actor-r0.md` — TIGHT PAIR
-- `/90-docs/adr/2605250200-l5-religious-marriage-cell.md` — existing Pregel-cell pattern
-- `/CHARTER-RIDER.md` — license + Rider canonical text
-- `/CLAUDE.md` — Status table row 73
+- `manifest.edn`, `identity.edn`, `dependencies.edn`
+- `lex/` — canonical EDN schemas
+- `registry/ceremony-recognition.seed.edn` — canonical informational registry
+- `wire/` — external wire projections only
+- root ADRs and sibling actors are pinned in `dependencies.edn`

@@ -2,7 +2,8 @@
 
 Per ADR-2605263400 §2 + §4 (G14 verified-recognition-only reliance). Every
 `com.etzhayyim.musubi.ceremonyRecognition` record in
-`ceremony-recognition.seed.json` ships `verificationStatus = unverified-seed`,
+`ceremony-recognition.seed.edn` is canonical and ships `verificationStatus = unverified-seed`;
+`wire/registry/ceremony-recognition.seed.json` is its external wire projection,
 and **no live action (the `musubi_recognition_resolver` resolve / any
 member-facing surfacing of a civil-recognition mapping) may run against an
 unverified-seed or stale entry**. This file documents how an entry is moved

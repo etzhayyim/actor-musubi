@@ -14,7 +14,7 @@
 | # | 項目 | 状態 | 完了イテレーション |
 |---|---|---|---|
 | 1 | ADR-2605263400 (master) | ✅ | init |
-| 2 | manifest.jsonld + README + CLAUDE.md | ✅ | init |
+| 2 | canonical `manifest.edn` + README + CLAUDE.md | ✅ | multirepo migration |
 | 3 | 5 Lexicons (`com.etzhayyim.musubi.*`) | ✅ | init |
 | 4 | **ceremony-recognition registry seed (worldwide, 全件 unverified-seed)** | ✅ | **iter-1** |
 

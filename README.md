@@ -77,7 +77,8 @@ Etymology: 結 (musubi) = tie / knot / bind / connect; Shinto 産霊
 | `seasonalCeremonyCalendar` | Annual schedule of communal ceremonies; opt-in attendance registry |
 | `silenMusubiReview` | Quarterly Council Wellbecoming + multi-gen ratio + Charter §1.13 + anti-coercive-economy audit |
 
-See `/00-contracts/lexicons/com/etzhayyim/musubi/README.md`.
+Canonical schemas live in this repository's `lex/`; JSON wire projections live in
+`wire/lex/`.
 
 ## Constitutional Gates (G1–G13)
 
@@ -104,11 +105,8 @@ See ADR-2605263400 §6.
 
 ## Related Files
 
-- `/20-actors/musubi/manifest.jsonld`
-- `/20-actors/musubi/CLAUDE.md`
-- `/00-contracts/lexicons/com/etzhayyim/musubi/` (5 Lexicons + README)
-- `/90-docs/adr/2605263400-musubi-covenant-ceremony-tier-b-actor-r0.md`
-- `/90-docs/adr/2605262700-chigiri-legal-procedure-tier-b-actor-r0.md` — TIGHT PAIR
-- `/90-docs/adr/2605250200-l5-religious-marriage-cell.md` — existing Pregel-cell reference
-- `/CHARTER-RIDER.md` §2(e) + §2(c) + §1.13 + §1.7 — gate sources
-- `/CLAUDE.md` — Status table row 73
+- `manifest.edn` — canonical actor metadata
+- `identity.edn` — canonical actor identity
+- `dependencies.edn` — immutable revisions for root ADRs and actor integrations
+- `lex/` — 5 canonical EDN lexicons
+- `wire/` — external JSON/JSON-LD projections only

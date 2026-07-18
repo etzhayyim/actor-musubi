@@ -1,0 +1,5 @@
+{:identity/id "did:web:musubi.etzhayyim.com"
+ :identity/actor "musubi"
+ :identity/canonical-document "manifest.edn"
+ :identity/external-did-document ".well-known/did.json"
+ :identity/canonical-format :edn}
