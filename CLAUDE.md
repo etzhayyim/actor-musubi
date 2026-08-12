@@ -1,4 +1,4 @@
-# com-etzhayyim-musubi — CLAUDE.md
+# actor-musubi — CLAUDE.md
 
 ## Identity
 

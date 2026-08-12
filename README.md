@@ -5,12 +5,18 @@
 **ADR**: ADR-2605263400 (R0 scaffold)
 **Status**: R0 scaffold (2026-05-26) — 6 cells path-reserved + 5 Lexicon skeletons
 **TIGHT PAIR**: chigiri (chigiri.covenant_ceremony cell explicit cross-actor at R2)
+**Canonical repository**: `etzhayyim/actor-musubi`
 
 ## Overview
 
 Religious-corp covenant ceremony performance substrate. Tight pair of
 chigiri (chigiri attests on-chain via covenantAttestation; musubi
 performs the ceremony itself). Six ceremony categories:
+
+Within the Tamaki artificial organism, musubi is the consent-bound ceremony
+organ. It may prepare and perform opted-in community ceremonies, but it cannot
+create a clergy class, compel attendance, confer state-recognized status, or
+bypass per-party consent and chigiri/Council attestations.
 
 - **Marriage** ceremony (Charter §1.12 routing-around; NOT state-recognized)
 - **Naming** ceremony (Adherent SBT issuance ritual; chigiri.member_onboarding pair)

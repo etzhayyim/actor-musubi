@@ -1,4 +1,4 @@
-{:repository/name "com-etzhayyim-musubi"
+{:repository/name "actor-musubi"
  :repository/category :actor
  :repository/canonical-format :edn
  :repository/canonical-metadata "manifest.edn"
