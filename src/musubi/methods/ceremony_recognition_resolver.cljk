@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; musubi 結 — INFORMATIONAL civil-recognition resolver (ADR-2605263400, G8/G14).
 (ns musubi.methods.ceremony-recognition-resolver
   "ceremony_recognition_resolver.cljc — musubi's first real computed-logic method.
@@ -49,7 +49,7 @@
 #?(:clj
    (def ^:private here-dir
      ;; captured at namespace-LOAD time (sci rebinds *file* to the caller / -e expr at
-     ;; call time) -- robust under the bb -e suite runner. Actor root = methods/../.
+     ;; call time) -- robust under the kbb -e suite runner. Actor root = methods/../.
      (-> *file* io/file .getCanonicalFile .getParentFile .getParentFile .getParentFile .getParentFile)))
 
 #?(:clj
