@@ -165,7 +165,7 @@ R3 adds seasonal_communal_ceremony + silenMusubiReview cycle.
 
 Repository verification:
 ```bash
-bb run_tests.clj
+bb run_tests.cljk
 ```
 
 ## Related Files
