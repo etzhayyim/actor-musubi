@@ -1,7 +1,7 @@
 (ns musubi.methods.test-charter-gates
   "musubi — constitutional-gate conformance tests. Substrate-native Clojure (ADR-2606160842); 1:1 port of pruned test_charter_gates.py."
   (:require [kotoba.test :refer [deftest is run-tests]]
-            [clojure.set :as set]
+            [kotoba.lang.coll :as set]
             [kotoba.lang.text :as str]
             [kotoba.lang.edn :as edn]))
 
