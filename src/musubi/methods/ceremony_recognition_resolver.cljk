@@ -35,7 +35,7 @@
   records of any real person. resolve-recognition itself is a pure function over a
   caller-supplied registry vector; load-registry is the (:clj-only) convenience
   reading the actual shipped seed."
-  (:require #?(:clj [clojure.edn :as edn])
+  (:require #?(:clj [kotoba.lang.edn :as edn])
             #?(:clj [clojure.java.io :as io])))
 
 (def confidence-rank

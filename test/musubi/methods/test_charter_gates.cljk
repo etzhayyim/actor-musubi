@@ -3,14 +3,14 @@
   (:require [kotoba.test :refer [deftest is run-tests]]
             [clojure.set :as set]
             [kotoba.lang.text :as str]
-            [clojure.edn :as edn]))
+            [kotoba.lang.edn :as edn]))
 
 (def ^:private here (.getParentFile (java.io.File. ^String *file*)))
 (def ^:private actor-dir (-> here .getParentFile .getParentFile .getParentFile))
 (def ^:private lexdir (java.io.File. actor-dir "lex"))
 
 (defn- manifest []
-  (let [e (clojure.edn/read-string (slurp (java.io.File. actor-dir "manifest.edn")))
+  (let [e (kotoba.lang.edn/read-string (slurp (java.io.File. actor-dir "manifest.edn")))
         gm (into {} (map (fn [g] [(:gate/id g) g]) (:actor/gates e)))]
     {"constitutionalGates" {"gates" gm}
      "gates" gm
