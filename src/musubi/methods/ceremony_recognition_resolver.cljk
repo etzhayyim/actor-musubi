@@ -36,7 +36,7 @@
   caller-supplied registry vector; load-registry is the (:clj-only) convenience
   reading the actual shipped seed."
   (:require #?(:clj [kotoba.lang.edn :as edn])
-            #?(:clj [clojure.java.io :as io])))
+            #?(:clj [kotoba.io :as io])))
 
 (def confidence-rank
   "Sort key: high < medium < low (ascending = most-confident first). Any other/unknown
@@ -50,7 +50,7 @@
    (def ^:private here-dir
      ;; captured at namespace-LOAD time (sci rebinds *file* to the caller / -e expr at
      ;; call time) -- robust under the kbb -e suite runner. Actor root = methods/../.
-     (-> *file* io/file .getCanonicalFile .getParentFile .getParentFile .getParentFile .getParentFile)))
+     (-> *file* io/file io/canonical-file io/parent-file io/parent-file io/parent-file io/parent-file)))
 
 #?(:clj
    (defn default-seed-path []
